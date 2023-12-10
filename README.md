@@ -7,7 +7,7 @@ FeedSurf is a lightweight RSS application for Windows desktop with customization
 <img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot1.png" Width="600">
 
 # Usage
-Download and launch the executable "FeedSurf.exe". The program is a portable application.
+Download and launch the executable "FeedSurf.exe". All files are stored in the location of the executable. This makes the software portable and easy to back-up.
 
 [Releases](https://github.com/jetspiking/FeedSurf/releases)
 
