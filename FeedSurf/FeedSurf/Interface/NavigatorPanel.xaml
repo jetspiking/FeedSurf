@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="FeedSurf.Interface.NavigatorPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:FeedSurf.Interface"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" SnapsToDevicePixels="True">
+    <DockPanel>
+        <StackPanel Orientation="Vertical" DockPanel.Dock="Top">
+            <Image x:Name="PanelImage" RenderOptions.BitmapScalingMode="HighQuality" RenderOptions.EdgeMode="Aliased" Stretch="Uniform" Height="100" />
+            <Label x:Name="UsernameLabel" HorizontalAlignment="Center" />
+            <Separator/>
+            <Label x:Name="TodayLabel" Content="Today" Margin="15,0,0,0" Visibility="Collapsed" />
+            <Label x:Name="FeaturedLabel" Content="Featured" Margin="15,0,0,0" Visibility="Collapsed" />
+            <Label x:Name="FeedsLabel" Content="Feeds" HorizontalAlignment="Center" Visibility="Collapsed" />
+            <Label x:Name="AllLabel" Content="All" Margin="15,0,0,0" />
+            <Label x:Name="RecentLabel" Content="Recent" Margin="15,0,0,0" />
+            <Label x:Name="FavoritesLabel" Visibility="Collapsed" Content="Favorites" Margin="15,0,0,0" />
+            <Label x:Name="DiscoverLabel" Content="Discover" Margin="15,0,0,0" Visibility="Collapsed" />
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
+            <DockPanel HorizontalAlignment="Stretch">
+                <Label x:Name="SetupLabel" Content="Settings" HorizontalAlignment="Center" DockPanel.Dock="Left"/>
+                <!--<Label x:Name="AddLabel" Content="Add" HorizontalAlignment="Left" DockPanel.Dock="Left"/>-->
+                <!--<Label x:Name="SettingsLabel" Content="Settings" HorizontalAlignment="Right" DockPanel.Dock="Right"/>-->
+            </DockPanel>
+        </StackPanel>
+        <ScrollViewer x:Name="FeedScroller" VerticalScrollBarVisibility="Hidden" Margin="15,0,0,0">
+            <StackPanel x:Name="FeedsPanel" Orientation="Vertical"/>
+        </ScrollViewer>
+    </DockPanel>
+</UserControl>

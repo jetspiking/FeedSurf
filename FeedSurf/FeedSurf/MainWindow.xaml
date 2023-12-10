@@ -1,0 +1,18 @@
+﻿<Window x:Class="FeedSurf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FeedSurf.Interface" 
+        mc:Ignorable="d"
+        Title="FeedSurf" Height="800" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <local:NavigatorPanel HorizontalAlignment="Stretch" Grid.Column="0" />
+        <local:LookupPanel x:Name="LookupPanel" Grid.Column="1" />
+        <local:SettingsPanel x:Name="SettingsPanel" Grid.Column="1" Visibility="Collapsed" />
+    </Grid>
+</Window>

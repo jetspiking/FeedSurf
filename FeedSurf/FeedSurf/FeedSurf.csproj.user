@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>C:\Users\dusti\source\repos\FeedSurf\FeedSurf\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Interface\FeedPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Interface\FeedSelectionItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Interface\LookupPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Interface\NavigatorPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Interface\PostItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Interface\ReaderPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Interface\SettingsPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Interface\FeedPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Interface\FeedSelectionItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Interface\LookupPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Interface\NavigatorPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Interface\PostItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Interface\ReaderPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Interface\SettingsPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
