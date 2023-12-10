@@ -1,5 +1,5 @@
-# <img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/Images/Icon.png" width="64" height="64"> FeedSurf
-<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/Images/Screenshot0.png" Width="250">  <img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/Images/Screenshot1.png" Width="250">
+# <img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Icon.png" width="64" height="64"> FeedSurf
+<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot0.png" Width="250">  <img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot1.png" Width="250">
 
 # Description
 FeedSurf is a lightweight RSS application for Windows desktop with customization options.
