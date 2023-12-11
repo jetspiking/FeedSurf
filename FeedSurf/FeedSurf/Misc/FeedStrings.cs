@@ -12,13 +12,9 @@ namespace FeedSurf.Misc
         public static readonly String ApplicationName = "FeedSurf";
 
         public static readonly String ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        public static readonly String ThemesDirectory = "Themes";
-        public static readonly String FeedsDirectory = "Feeds";
-        public static readonly String PostsDirectory = "Posts";
 
-        public static readonly String ApplicationDirectoryThemes = Path.Combine(ApplicationDirectory, ThemesDirectory);
-        public static readonly String ApplicationDirectoryFeeds = Path.Combine(ApplicationDirectory, FeedsDirectory);
-        public static readonly String ApplicationDirectoryPosts = Path.Combine(ApplicationDirectory, PostsDirectory);
+        public static readonly String ApplicationDirectoryThemes = ApplicationDirectory;
+        public static readonly String ApplicationDirectoryFeeds = ApplicationDirectory;
 
         public static readonly String FileDefaultTheme = "Default.json";
         public static readonly String FileUser = "User.json";
@@ -27,6 +23,9 @@ namespace FeedSurf.Misc
         public static readonly String FileFeedsRecent = "Recent.json";
 
         public static readonly String FileDefaultImage = "OSQDark.png";
+
+        public static readonly String InvalidThemeFile = "Theme file is invalid, fallback to default theme!";
+
         public static readonly Int32 RecentCount = 5;
     }
 }

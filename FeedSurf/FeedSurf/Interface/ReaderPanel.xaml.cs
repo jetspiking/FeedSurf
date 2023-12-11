@@ -76,6 +76,7 @@ namespace FeedSurf.Interface
             this.DateLabel.FontSize = this._appState.LocalThemeConfiguration.ReaderDateTimeFontSize;
             this.DateLabel.FontWeight = this._appState.LocalThemeConfiguration.ReaderDateTimeFontWeight;
 
+            this.ContentDefinition.Width = new GridLength(4, GridUnitType.Star);
             this.ExtraContentDefinition.Width = new GridLength(1, GridUnitType.Star);
 
             if (String.IsNullOrEmpty(extraContentUrl)) 

@@ -157,6 +157,9 @@ namespace FeedSurf.Interface
 
         public async void SelectAllLabel()
         {
+            MainWindow.MainWindowInstance.SettingsPanel.Visibility = Visibility.Collapsed;
+            MainWindow.MainWindowInstance.LookupPanel.Visibility = Visibility.Visible;
+
             this.AllLabel.Foreground = _appState._navigatorSelectColorBrush;
             this.RecentLabel.Foreground = _appState._navigatorDeselectColorBrush;
             this.FavoritesLabel.Foreground = _appState._navigatorDeselectColorBrush;
@@ -169,6 +172,9 @@ namespace FeedSurf.Interface
 
         public async void SelectRecentLabel()
         {
+            MainWindow.MainWindowInstance.SettingsPanel.Visibility = Visibility.Collapsed;
+            MainWindow.MainWindowInstance.LookupPanel.Visibility = Visibility.Visible;
+
             this.RecentLabel.Foreground = _appState._navigatorSelectColorBrush;
             this.AllLabel.Foreground = _appState._navigatorDeselectColorBrush;
             this.FavoritesLabel.Foreground = _appState._navigatorDeselectColorBrush;
@@ -181,6 +187,9 @@ namespace FeedSurf.Interface
 
         public async void SelectSettingsLabel() 
         {
+            this.FeedsPanel.Children.Clear();
+            this._appState.LookupPanel.ClearItems();
+
             this.DiscoverLabel.Foreground = _appState._navigatorDeselectColorBrush;
             this.FavoritesLabel.Foreground = _appState._navigatorDeselectColorBrush;
             this.AllLabel.Foreground = _appState._navigatorDeselectColorBrush;
@@ -215,9 +224,6 @@ namespace FeedSurf.Interface
 
                 item.MouseDown += (object sender, MouseButtonEventArgs e) =>
                 {
-                    MainWindow.MainWindowInstance.SettingsPanel.Visibility = Visibility.Collapsed;
-                    MainWindow.MainWindowInstance.LookupPanel.Visibility = Visibility.Visible;
-
                     foreach (FeedSelectionItem otherItem in this.FeedsPanel.Children)
                     {
                         otherItem.DeselectItem();

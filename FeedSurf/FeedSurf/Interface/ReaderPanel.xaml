@@ -20,7 +20,7 @@
         <Image x:Name="Icon" Width="90" Height="90" DockPanel.Dock="Bottom"></Image>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="4*" x:Name="ContentDefinition" />
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="1*" x:Name="ExtraContentDefinition" />
             </Grid.ColumnDefinitions>

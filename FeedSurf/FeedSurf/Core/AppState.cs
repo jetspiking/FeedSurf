@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace FeedSurf.Core
@@ -63,7 +64,12 @@ namespace FeedSurf.Core
             }
 
             this.LocalThemeConfiguration = ThemeMocker.GetFallbackTheme();
-            StateSerializer.ToDiskThemeConfiguration(this.LocalThemeConfiguration, LocalUserConfiguration.ThemeActive);
+            if (!StateSerializer.HasDiskThemeConfiguration(LocalUserConfiguration.ThemeActive))
+                StateSerializer.ToDiskThemeConfiguration(this.LocalThemeConfiguration, LocalUserConfiguration.ThemeActive);
+            else
+            {
+                MessageBox.Show(FeedStrings.InvalidThemeFile, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public async Task ReadAllFeeds()

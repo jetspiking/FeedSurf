@@ -18,10 +18,8 @@
             <Button x:Name="AddButton" Content="Add" Grid.Column="1"/>
             <Button x:Name="RemoveButton" Content="Remove" Grid.Column="2"/>
         </Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <StackPanel x:Name="FeedsPanel" Orientation="Vertical">
-                
-            </StackPanel>
-        </ScrollViewer>
+        <StackPanel x:Name="FeedsPanel" Orientation="Vertical">
+
+        </StackPanel>
     </StackPanel>
 </UserControl>

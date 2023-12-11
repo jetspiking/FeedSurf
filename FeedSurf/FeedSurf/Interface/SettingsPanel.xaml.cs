@@ -44,7 +44,7 @@ namespace FeedSurf.Interface
 
             this.AllPanel.RemoveButton.Click += (object sender, RoutedEventArgs e) =>
             {
-                RemoveFeedAll();
+                RemoveFeedAll(this.AllPanel.SelectedToRemove.Url);
             };
 
             LoadFeedLists();
@@ -67,12 +67,12 @@ namespace FeedSurf.Interface
             }
         }
 
-        public void RemoveFeedAll()
+        public void RemoveFeedAll(String url)
         {
             if (this.AllPanel.SelectedToRemove == null) return;
 
             List<RssFeed> rssFeed = this._appState.FeedCollectionAll.Feeds.ToList<RssFeed>();
-            rssFeed.RemoveAll(f => f.Url == this.AllPanel.SelectedToRemove.Url);
+            rssFeed.RemoveAll(f => f.Url == url);
             this._appState.FeedCollectionAll.Feeds = rssFeed.ToArray();
             this._appState.SaveAllFeeds();
             this.Background = new SolidColorBrush(this._appState.LocalThemeConfiguration.NavigatorBackgroundColor);

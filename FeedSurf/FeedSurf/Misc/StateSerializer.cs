@@ -5,6 +5,11 @@ namespace FeedSurf.Misc
 {
     public static class StateSerializer
     {
+        public static Boolean HasDiskThemeConfiguration(String themeName)
+        {
+            return File.Exists(Path.Combine(FeedStrings.ApplicationDirectoryThemes, themeName));
+        }
+
         public static void ToDiskThemeConfiguration(ThemeConfiguration themeConfiguration, String themeName)
         {
             if (!Directory.Exists(FeedStrings.ApplicationDirectoryThemes))

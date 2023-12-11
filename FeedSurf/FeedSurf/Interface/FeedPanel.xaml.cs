@@ -54,8 +54,6 @@ namespace FeedSurf.Interface
             if (feedResult == null) return null;
 
             RssFeed feed = new(feedResult.Title, url, feedResult.ImageUrl);
-            //AddFeed(feed);
-
             return feed;
         }
 
@@ -73,16 +71,28 @@ namespace FeedSurf.Interface
 
         public void AddFeed(RssFeed feed)
         {
-            BitmapImage bitmap = new BitmapImage();
-            bitmap.BeginInit();
-            if (String.IsNullOrEmpty(feed.ImageUrl)) return;
-            bitmap.UriSource = new Uri(feed.ImageUrl, UriKind.Absolute);
-            bitmap.CacheOption = BitmapCacheOption.OnLoad;
-            bitmap.EndInit();
-
             StackPanel feedPanel = new();
             feedPanel.Orientation = Orientation.Horizontal;
             feedPanel.Margin = new Thickness(5, 5, 5, 5);
+
+            Image urlImage = new();
+
+
+            if (!String.IsNullOrEmpty(feed.ImageUrl))
+            {
+
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(feed.ImageUrl, UriKind.Absolute);
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.EndInit();
+
+                urlImage.Source = bitmap;
+            }
+
+            urlImage.Width = 64;
+            urlImage.Height = 64;
+            feedPanel.Children.Add(urlImage);
 
             Label nameLabel = new();
             nameLabel.Content = feed.Name;
@@ -90,14 +100,7 @@ namespace FeedSurf.Interface
             nameLabel.Foreground = new SolidColorBrush(this._appState.LocalThemeConfiguration.LookupDescriptionColor);
             nameLabel.FontFamily = this._appState.LocalThemeConfiguration.LookupDescriptionFontFamily;
             nameLabel.FontSize = this._appState.LocalThemeConfiguration.LookupDescriptionFontSize;
-
-            Image urlImage = new();
-            urlImage.Source = bitmap;
-
-            urlImage.Width = 64;
-            urlImage.Height = 64;
-
-            feedPanel.Children.Add(urlImage);
+            
             feedPanel.Children.Add(nameLabel);
 
             feedPanel.MouseEnter += (object sender, MouseEventArgs e) =>
@@ -118,7 +121,7 @@ namespace FeedSurf.Interface
                 }
                 this.SelectedToRemove = feed;
                 this.selectedLabel = nameLabel;
-                nameLabel.Foreground = new SolidColorBrush(this._appState.LocalThemeConfiguration.NavigatorDefaultColor);
+                nameLabel.Foreground = new SolidColorBrush(this._appState.LocalThemeConfiguration.NavigatorSelectColor);
             };
 
             this.FeedsPanel.Children.Add(feedPanel);
