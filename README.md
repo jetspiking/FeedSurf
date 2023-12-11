@@ -1,10 +1,10 @@
 # <img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Icon.png" width="64" height="64"> FeedSurf
-<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot3.png" Width="600">
+<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot3.png" Width="800">
 
 # Description
 FeedSurf is a lightweight RSS application for Windows desktop with customization options.
 
-<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot1.png" Width="700">
+<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot1.png" Width="800">
 
 # Usage
 Download and launch the executable "FeedSurf.exe". All files are stored in the location of the executable. This makes the software portable and easy to back-up.
@@ -14,7 +14,7 @@ Download and launch the executable "FeedSurf.exe". All files are stored in the l
 # Customization
 The client is highly customizable by providing a JSON file containing font-settings (fontfamily, fontsize, fontweight, color) and reader settings (custom image, background color).
 
-<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot2.png" Width="700">
+<img src="https://raw.githubusercontent.com/jetspiking/FeedSurf/main/Images/Screenshot2.png" Width="800">
 
 # Requirements
 - Windows (7 and up)
