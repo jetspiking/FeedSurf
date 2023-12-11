@@ -11,6 +11,9 @@ Download and launch the executable "FeedSurf.exe". All files are stored in the l
 
 [Releases](https://github.com/jetspiking/FeedSurf/releases)
 
+# Customization
+The client is highly customizable by providing a JSON file containing font-settings (fontfamily, fontsize, fontweight, color) and reader settings (custom image, background color).
+
 # Requirements
 - Windows (7 and up)
 - .NET Framework Installed
